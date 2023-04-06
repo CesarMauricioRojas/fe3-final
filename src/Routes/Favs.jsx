@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "../Components/Card";
-
+import dentista from "../img/doctor.jpg"
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 const Favs = () => {
   
@@ -14,7 +14,7 @@ const Favs = () => {
       <div className="card-grid zoomIn">
         {parsedFavs.map(usersFavs => (
             <div className="dentist-favs">
-              <img className="doctor-img" src="https://images.vexels.com/media/users/3/199903/isolated/preview/ef8a3b09efaa376859c4c8ccfa362b82-caracter-de-doctor-hombre.png" alt="" />
+              <img className="doctor-img" src={dentista} alt="" />
               <h3>{usersFavs.name}</h3>
             </div>
         ))}

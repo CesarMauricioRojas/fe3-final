@@ -7,8 +7,6 @@ import { Route, Routes } from "react-router-dom";
 import Favs from "./Routes/Favs";
 import Detail from "./Routes/Detail";
 
-// probando cuenta git
-
 function App() {
   return (
     <div className="App">

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import dentista from "../img/doctor.jpg"
 
 const Card = ({ dentist }) => {
   const [favs, setFavs] = useState(
@@ -18,7 +19,7 @@ const Card = ({ dentist }) => {
     <div className="card">
       <br /><h3 className="title">Dentist</h3><br />
       <Link to={"/detail/" + dentist.id}>
-        <img className="doctor-img" src="https://images.vexels.com/media/users/3/199903/isolated/preview/ef8a3b09efaa376859c4c8ccfa362b82-caracter-de-doctor-hombre.png" alt="" />
+        <img className="doctor-img" src={dentista} alt="" />
         <p style={{textAlign:"center"}}>{dentist.name}</p>
         <p style={{textAlign:"center"}}>{dentist.username}</p>
       </Link>
