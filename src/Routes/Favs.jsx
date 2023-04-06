@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import Card from "../Components/Card";
 import dentista from "../img/doctor.jpg"
+import { ContextGlobal } from "../Components/utils/global.context";
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 const Favs = () => {
+
+  const { theme, toggleTheme } = useContext(ContextGlobal);
   
   const favs = localStorage.getItem('favs')
   let parsedFavs = JSON.parse(favs) || []
   return (
-    <div className="fadeIn">
+    <div className={`${theme} fadeIn`}>
       <br />
       <h1>Dentists Favs</h1>
       <br /><br />

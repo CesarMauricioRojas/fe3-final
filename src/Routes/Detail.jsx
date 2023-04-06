@@ -19,8 +19,9 @@ const Detail = () => {
       .then((data) => setUser(data));
   }, []);
 
+
   return (
-    <div className="user fadeIn">
+    <div className={`${theme} user fadeIn`}>
       <div className={`${theme} card user-card`}>
         <h2>Detail Dentist id </h2>
         <img className="doctor-img" src={dentista} alt="" />
