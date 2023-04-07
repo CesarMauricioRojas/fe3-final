@@ -8,10 +8,11 @@ const Card = ({ dentist }) => {
   );
     
   const addFav = () => {
+    const favs = JSON.parse(localStorage.getItem("favs")) || [];
     const isFav = favs.find((fav) => fav.id === dentist.id);
     if (!isFav) {
-      setFavs([...favs, dentist]);
-      localStorage.setItem("favs", JSON.stringify([...favs, dentist]));
+      favs.push(dentist);
+      localStorage.setItem("favs", JSON.stringify(favs));
     }
   };
 
