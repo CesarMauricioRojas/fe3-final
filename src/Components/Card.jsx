@@ -1,11 +1,7 @@
-import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import dentista from "../img/doctor.jpg"
 
 const Card = ({ dentist }) => {
-  const [favs, setFavs] = useState(
-    JSON.parse(localStorage.getItem("favs")) || []
-  );
     
   const addFav = () => {
     const favs = JSON.parse(localStorage.getItem("favs")) || [];

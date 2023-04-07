@@ -11,7 +11,7 @@ const Detail = () => {
   const [user, setUser] = useState([]);
   const { id } = useParams();
   const url = "https://jsonplaceholder.typicode.com/users/" + id;
-  const { theme, toggleTheme } = useContext(ContextGlobal);
+  const { theme } = useContext(ContextGlobal);
 
   useEffect(() => {
     fetch(url)
@@ -23,12 +23,12 @@ const Detail = () => {
   return (
     <div className={`${theme} user fadeIn`}>
       <div className={`${theme} card user-card`}>
-        <h2>Detail Dentist id </h2>
+        <h2>Detail Dentist id {user.id}</h2>
         <img className="doctor-img" src={dentista} alt="" />
-        <p>{user.name}</p>
-        <p>{user.email}</p>
-        <p>{user.phone}</p>
-        <p>{user.website}</p>
+        <p>Name: {user.name}</p>
+        <p>Email: {user.email}</p>
+        <p>Phone: {user.phone}</p>
+        <p>Website: {user.website}</p>
         {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
         {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
       </div>

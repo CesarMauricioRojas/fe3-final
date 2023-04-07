@@ -10,7 +10,7 @@ import {
 
 const Home = () => {
   const { user } = useUserStates();
-  const { theme, toggleTheme } = useContext(ContextGlobal);
+  const { theme } = useContext(ContextGlobal);
   console.log(user);
   return (
     <main className={`${theme} fadeIn`}>
